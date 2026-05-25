@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tree 🌳 - Catatan Pengeluaran Cerdas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Full Ijo Pastel -->
+        <header>
+            <h1>Money Tree 🌳</h1>
+            <p>Catatan Pengeluaran Cerdas</p>
+        </header>
+
+        <!-- Layar Beranda (Input) -->
+        <section id="layar-beranda" class="screen">
+            <h2>Input Pengeluaran</h2>
+            <div class="input-card">
+                <div class="input-field">
+                    <label>Nama Pengeluaran</label>
+                    <input type="text" id="nama-item" placeholder="Misal: Jajan Boba">
+                </div>
+                <div class="input-field">
+                    <label>Harga (Rp)</label>
+                    <input type="number" id="harga-item" placeholder="50000">
+                </div>
+                <div class="input-field">
+                    <label>Tanggal</label>
+                    <input type="date" id="tanggal-item">
+                </div>
+                <button class="btn-primary" onclick="simpanData()">SIMPAN DATA</button>
+            </div>
+        </section>
+
+        <!-- Layar Arsip -->
+        <section id="layar-arsip" class="screen hidden">
+            <div class="arsip-header">
+                <h2>Riwayat Arsip</h2>
+                <p>Urut berdasarkan pengeluaran terbesar</p>
+            </div>
+            <div id="arsip-konten">
+                <!-- Data otomatis muncul di sini -->
+            </div>
+            <button class="btn-reset" onclick="resetArsip()">Reset Semua Data</button>
+        </section>
+
+        <!-- Navigasi Bawah (Floating Style) -->
+        <nav class="bottom-nav">
+            <div class="nav-item" onclick="pindahLayar('beranda')">
+                <span class="icon">🏠</span>
+                <p>Beranda</p>
+            </div>
+            <div class="nav-item" onclick="pindahLayar('arsip')">
+                <span class="icon">📁</span>
+                <p>Arsip</p>
+            </div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
