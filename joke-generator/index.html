@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator 😂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="joke-container">
+        <header>
+            <h1>😂 Random Joke Generator</h1>
+            <p>Get a laugh with a random joke!</p>
+        </header>
+
+        <main>
+            <!-- Joke Display -->
+            <div class="joke-box">
+                <div id="joke-content" class="joke-content">
+                    <p>Click the button to get a joke!</p>
+                </div>
+                <div id="loading" class="loading hidden">
+                    <p>Loading joke...</p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button class="btn-primary" onclick="getJoke()">Get a Joke! 🎭</button>
+                <button class="btn-secondary" onclick="getJokeByType('programming')">Programming Joke 💻</button>
+                <button class="btn-secondary" onclick="getJokeByType('knock-knock')">Knock Knock 🚪</button>
+            </div>
+
+            <!-- Joke Type Filter -->
+            <div class="filter-section">
+                <label for="joke-type">Select Joke Type:</label>
+                <select id="joke-type" onchange="getJokeByType(this.value)">
+                    <option value="">All Types</option>
+                    <option value="general">General</option>
+                    <option value="programming">Programming</option>
+                    <option value="knock-knock">Knock Knock</option>
+                </select>
+            </div>
+
+            <!-- Joke Counter -->
+            <div class="stats">
+                <p>Jokes Generated: <span id="joke-count">0</span></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by JokeAPI • Made with ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
